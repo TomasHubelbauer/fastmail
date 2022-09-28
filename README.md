@@ -8,15 +8,10 @@ We can use the examples Fastmail have provided in their JMAP-Samples repository:
 
 https://github.com/fastmail/JMAP-Samples/tree/main/javascript
 
-The samples include a hello-world sample which creates an email draft and a
-top-ten sample, which lists the top of the inbox.
+The samples include a `hello-world` sample which creates an email draft and a
+`top-ten` sample, which lists the top of the inbox.
 
-The samples use the `fetch` API natively available in the Node API.
-Node 18+ must be used to run them.
-NPM is not needed.
-I opened an issue related to this: https://github.com/fastmail/JMAP-Samples/issues/16
-
-The samples are run as such:
+The samples use the `fetch` API natively available in the Node 18+. Run like so:
 
 ```bash
 JMAP_USERNAME=tomas@hubelbauer.net JMAP_TOKEN=fmu1-… node hello-world/top-ten
