@@ -31,26 +31,30 @@ you.
 
 ## Locked Down Tokens
 
-As of current, it appears that the tokens are full-inbox in scope and I am not
-aware of a way to lock them down to a subset of the inbox.
-I would welcome this option so that a more focused scope token could be made
-available to scripts hosted on 3rd party platforms without the worry of a full
-inbox email leak.
-I have email jmapsupport@fastmail.com inquiring about this option.
-I suggested adding the ability to specify subset of inbox to return in the
-responses using folders, patterns on the email data and metadata or generalized 
-using saved searches associated with the token during its creation.
+As of current, I don't see a way to limit a token to a subset of the inbox.
+This is a crucial feature in order to avoid leaking my inbox on token leak.
+That's a concern when using the token on a 3rd party infrastructure, like CI/CD.
 
-Fastmail develops a programming language called Sieve which is used for scripts
-that filter and take further actions on emails. Associating a Sieve script with
-an API token seems like an ideal solution for this.
+I emailed jmapsupport@fastmail.com and suggested several options of introducing
+locked down tokens including associating tokens with folders, patterns (would
+operate on email data and metadata), aliases etc.
+Later on I found out about Sieve, a filtering and actioning programming language
+supported by Fastmail for automated email management.
+I have updated my suggestion to say that associating a piece of Sieve code to a
+token seems like a preferrable solution.
+
+Information about Sieve:
 https://www.fastmail.help/hc/en-us/articles/1500000280481-Sieve-scripts
 
-Here is a Sieve playground:
+Sieve playground:
 https://www.fastmail.com/cgi-bin/sievetest.pl
 
 ## Webhooks
 
-I have inquired to Fastmail in the same email mentioned above about the option
-of introducing webhook support such that new email meeting predefined criteria
-would trigger a webhook call to tie automation to.
+In the same conversation where I asked Fastmail about locked down tokens, I have
+also inquired about the possibility of adding webhooks which fire when new email
+is received.
+This would introduce on option of having automations react to new email instead
+of poll for new email.
+Similarly to the locked down tokens, associating Sieve code with the webhook
+seems like the best way to specify what email it should apply to.
