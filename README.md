@@ -49,6 +49,13 @@ https://www.fastmail.help/hc/en-us/articles/1500000280481-Sieve-scripts
 Sieve playground:
 https://www.fastmail.com/cgi-bin/sievetest.pl
 
+Fastmail support told me nothing like this is on the roadmap yet and most of my
+suggestions aren't likely to be on the roadmap ever, but they did suggest I
+could create a new user and share a folder with them, then I could create a PAT
+for that user only and see only the emails they have in the shared folder.
+
+- [ ] Buy a new Fastmail user and share a folder with them and verify this
+
 ## Webhooks
 
 In the same conversation where I asked Fastmail about locked down tokens, I have
@@ -58,3 +65,9 @@ This would introduce on option of having automations react to new email instead
 of poll for new email.
 Similarly to the locked down tokens, associating Sieve code with the webhook
 seems like the best way to specify what email it should apply to.
+
+Fastmail support told me they might add something akin to webhooks to the Rules
+feature on the site. Sieve even used to support something like that, but it was
+removed.
+
+Until something like this is added, I will probably stick with polling the user.
